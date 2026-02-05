@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --background-clr-1: radial-gradient(
+    circle,
+    hsl(215, 18%, 25%) 0%,
+    hsla(215, 18%, 15%, 1) 90%
+  );
+  --background-clr-2: #3e46539c;
+  --text-clr-1: #0e819e;
+  --text-clr-2: #e0e0e0;
+}
+
+$font-heading: "Bangers", sans-serif;
+$font-main: "Roboto", sans-serif;
+
+.lightmode {
+  --background-clr-1: radial-gradient(
+    circle,
+    hsla(37, 25%, 86%, 1) 4%,
+    hsla(37, 13%, 73%, 1) 75%
+  );
+  --background-clr-2: #e0dcd39f;
+  --text-clr-1: #94ac94;
+  --text-clr-2: #474747;
+}
