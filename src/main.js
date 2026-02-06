@@ -56,23 +56,21 @@ function renderJokes() {
 }
 
 function saveJoke() {
+  if (saveJokeButton.classList.contains("current-joke__save-btn--saved")) {
+    alert("Der Witz wurde bereits gespeichert!");
+    return;
+  }
+
   const joke = {
     content: currentJokeEle.textContent,
     id: crypto.randomUUID(),
     saved: new Date(),
   };
+
   jokes.push(joke);
   saveJokeButton.classList.add("current-joke__save-btn--saved");
   renderJokes();
   saveToLocalStorage();
-}
-
-function savedCheck() {
-  if (saveJokeButton.classList.contains("current-joke__save-btn--saved")) {
-    alert("Der Witz wurde bereits gespeichert!");
-    return;
-  }
-  saveJoke();
 }
 
 function deleteJoke(click) {
@@ -106,5 +104,5 @@ function toggleTheme() {
 // event listeners
 newJokeButton.addEventListener("click", fetchJoke);
 savedJokesListEle.addEventListener("click", deleteJoke);
-saveJokeButton.addEventListener("click", savedCheck);
+saveJokeButton.addEventListener("click", saveJoke);
 themeToggleButton.addEventListener("click", toggleTheme);
