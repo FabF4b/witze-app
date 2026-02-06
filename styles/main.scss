@@ -64,7 +64,7 @@ body {
 }
 
 .current-joke {
-  width: 90%;
+  width: 80%;
   background-color: var(--background-clr-2);
   border-radius: 16px;
   padding: 1.5rem;
@@ -117,7 +117,7 @@ body {
 }
 
 .saved-jokes {
-  width: 69%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,5 +160,15 @@ body {
       fill: var(--text-clr-2);
       transition: all 0.2s ease-in-out;
     }
+  }
+}
+
+@media (width > 1024px) {
+  .current-joke {
+    width: 55%;
+  }
+
+  .saved-jokes {
+    width: 50%;
   }
 }
