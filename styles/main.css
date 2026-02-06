@@ -142,6 +142,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  padding-bottom: 4rem;
 }
 .saved-jokes__saved-joke {
   width: 100%;
